@@ -43,6 +43,7 @@ time.innerHTML = showTime();
 let city = "Barcelona";
 let unit = "metric";
 
+searchCityTemp(city, unit);
 // Get city
 
 function getLocation(event) {
@@ -62,8 +63,6 @@ function getGeolocationTemp(position) {
     )
     .then(updateWeather);
 }
-
-navigator.geolocation.getCurrentPosition(getGeolocationTemp);
 
 // Update weather
 function updateWeather(response) {
