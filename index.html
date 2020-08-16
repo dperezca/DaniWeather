@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dani's WeatherApp</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/3b112a6c44.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-2" id="icono">
+        <span class="temp" id="C"> °C </span><span class="temp">|</span><span id="F" class="temp"><a href="#" class="link">°F</a></span>
+          <span class="iconoBig">
+            <i class="fas fa-sun fa-7x" id="bigIcon"></i
+          ></span>
+        </div>
+        <div class="col-4 align-self-center" id="activeCity">
+          <h1>
+            <span id="currentTemp">{{TP}}</span>°<span id="currentUnit">{{U}}</span><br /><span id="currentCity">
+              {{CITY}}                                                                                      
+            </span>
+          </h1>
+          <h2 id="date"></h2>
+        </div>
+        <div class="col-6 align-self-center " id="searchBox">
+          <form  id="searchForm"> 
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="citySearch"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <p>
+              <button type="submit" class="btn btn-primary search">
+                SEARCH
+              </button>
+              <button class="btn btn-primary search" id="currentCityBtn">
+                CURRENT
+              </button>
+            </p>
+            <p>
+              Other cities:
+              <ul>
+                <li>
+                  Paris
+                </li>
+                <li>New York</li>
+                <li>Buenos Aires</li>
+                <li>Lima</li>
+              </ul>
+            </p>
+          </form>
+        </div>
+      </div>
+            <div class="row abajo">
+              <div class="col-2">
+                <span class="days">
+                  <i class="fas fa-cloud-sun fa-3x"></i> <br />
+                    <h3>
+                      <span id="day1">
+                        {{DAY}}
+                      </span><br />
+                    <span class="temp">20° | </span><span class="temps">23°</span>
+                  </h3>
+                </span>
+              </div>
+              <div class="col-2">
+                <span class="days">
+                  <i class="fas fa-cloud-sun fa-3x"></i> <br />
+                    <h3>
+                      <span id="day2">
+                        {{DAY}}
+                      </span><br />
+                    <span class="temp">20° | </span><span class="temps">23°</span>
+                  </h3>
+                </span>
+              </div>
+              <div class="col-2">
+                <span class="days">
+                  <i class="fas fa-cloud-sun fa-3x"></i> <br />
+                    <h3>
+                      <span id="day3">
+                        {{DAY}}
+                      </span> <br />
+                    <span class="temp">20° | </span><span class="temps">23°</span>
+                  </h3>
+                </span>
+              </div>
+              <div class="col-2">
+                <span class="days">
+                  <i class="fas fa-cloud-sun fa-3x"></i> <br />
+                    <h3>
+                      <span id="day4">
+                        {{DAY}}
+                      </span><br />
+                    <span class="temp">20° | </span><span class="temps">23°</span>
+                  </h3>
+                </span>
+              </div>
+              <div class="col-2">
+                <span class="days">
+                  <i class="fas fa-cloud-sun fa-3x"></i> <br />
+                    <h3>
+                      <span id="day5">
+                        {{DAY}}
+                      </span> <br />
+                    <span class="temp">20° | </span><span class="temps">23°</span>
+                  </h3>
+                </span>
+              </div>
+              <div class="col-2">
+                <span class="days">
+                  <i class="fas fa-cloud-sun fa-3x"></i> <br />
+                    <h3>
+                      <span id="day6">
+                        {{DAY}}
+                      </span>
+                   <br />
+                    <span class="temp">20° | </span><span class="temps">23°</span>
+                  </h3>
+                </span>
+              </div>
+            </div>
+            </div>
+            </div>
+            </div>
+    </div>
+  <script src="src/index2.js"></script>-->
+  </body>
+</html>
