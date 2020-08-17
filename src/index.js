@@ -184,7 +184,7 @@ function searchForecast() {
 }
 
 function showForecast(response) {
-  for (var i = 1; i < 3; i++) {
+  for (var i = 1; i < 7; i++) {
     document.querySelector(`#day${i}-min`).innerHTML = `${Math.round(
       response.data.daily[getNextDays(i)].temp.min
     )}`;
