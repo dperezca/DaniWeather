@@ -47,6 +47,7 @@ let longitude = 2.16;
 //
 
 searchByName();
+searchForecast();
 
 // Search by name
 
@@ -169,3 +170,26 @@ document.querySelector("#day5").innerHTML = `${weekdays[getNextDays(5)]}`;
 document.querySelector("#day6").innerHTML = `${weekdays[getNextDays(6)]}`;
 
 console.log(getNextDays(2));
+
+// Get forecast
+
+function searchForecast() {
+  let apiKey = "e28aa466d1d85ef673d9691ed7fbb426";
+  let apiURL = "https://api.openweathermap.org/data/2.5/onecall?";
+  axios
+    .get(
+      `${apiURL}lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${unit}`
+    )
+    .then(showForecast);
+}
+
+function showForecast(response) {
+  for (var i = 1; i < 3; i++) {
+    document.querySelector(`#day${i}-min`).innerHTML = `${Math.round(
+      response.data.daily[getNextDays(i)].temp.min
+    )}`;
+    document.querySelector(`#day${i}-max`).innerHTML = `${Math.round(
+      response.data.daily[getNextDays(i)].temp.max
+    )}`;
+  }
+}
