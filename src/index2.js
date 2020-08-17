@@ -42,21 +42,44 @@ time.innerHTML = showTime();
 // Declare variables
 let city = "Barcelona";
 let unit = "metric";
+let latitude = 41.39;
+let longitude = 2.16;
+//
 
-searchCityTemp(city, unit);
-// Get city
+searchByName();
+
+// Search by name
+
+function searchByName() {
+  let apiKey = "d3d18b4de61cbdf36ec875b64e7d8cae";
+  let apiURL = "https://api.openweathermap.org/data/2.5/weather?q=";
+  axios
+    .get(`${apiURL}${city}&appid=${apiKey}&units=${unit}`)
+    .then(updateWeather, searchError);
+}
+
+// Get coordenates of the city
+// When we have geolocation
 
 function getLocation(event) {
   event.preventDefault();
-  navigator.geolocation.getCurrentPosition(getGeolocationTemp);
+  navigator.geolocation.getCurrentPosition(searchByLocation, locationError);
 }
 
-function getGeolocationTemp(position) {
-  console.log(position);
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
+function locationError() {
+  alert("No hay location");
+}
+
+function searchError() {
+  alert("There is no city with that name, please try again");
+}
+
+// Search for the weather
+function searchByLocation(position) {
   let apiKey = "e28aa466d1d85ef673d9691ed7fbb426";
   let apiURL = "https://api.openweathermap.org/data/2.5/weather?";
+  latitude = position.coords.latitude;
+  longitude = position.coords.longitude;
   axios
     .get(
       `${apiURL}lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${unit}`
@@ -67,10 +90,9 @@ function getGeolocationTemp(position) {
 // Update weather
 function updateWeather(response) {
   console.log(response);
-  // City
-  city = response.data.name; // Update on global variable
-  let currentCity = document.querySelector("#currentCity"); // Where to update
-  currentCity.innerHTML = `${city}`; // Update
+  city = response.data.name;
+  let currentCity = document.querySelector("#currentCity");
+  currentCity.innerHTML = `${city}`;
   // Temperature
   let currentTemp = document.querySelector("#currentTemp");
   let newTemp = Math.round(response.data.main.temp);
@@ -97,16 +119,7 @@ function searchCity(event) {
   event.preventDefault();
   let newCity = document.querySelector("#citySearch");
   city = newCity.value;
-  searchCityTemp(city, unit);
-}
-
-function searchCityTemp(city, unit) {
-  console.log(city);
-  let apiKey = "e28aa466d1d85ef673d9691ed7fbb426";
-  let apiURL = "https://api.openweathermap.org/data/2.5/weather?q=";
-  axios
-    .get(`${apiURL}${city}&appid=${apiKey}&units=${unit}`)
-    .then(updateWeather);
+  searchByName();
 }
 
 //Change C/F
@@ -131,8 +144,7 @@ function changeUnit(event) {
     unit = "metric";
   }
   showCF();
-  searchCityTemp(city, unit);
-  console.log(unit);
+  searchByName();
 }
 
 F.addEventListener("click", changeUnit);
