@@ -23,32 +23,22 @@
   </head>
   <body>
     <div class="container">
-      <div class="row">
-        <!-- Search box -->
-        <div class="col-12 col-sm-10 order-sm-last" id="searchBox">
-          <form id="searchForm">
-            <div class="form-group">
-              <input
-                type="text"
-                class="form-control"
-                id="citySearch"
-                aria-describedby="emailHelp"
-              />
-              <button type="submit" class="btn btn-primary search">
-                SEARCH
-              </button>
-              <button class="btn btn-primary search" id="currentCityBtn">
-                CURRENT
-              </button>
-            </div>
-          </form>
+      <div class="row searchBar">
+        <form id="searchForm"></form>
+        <div class="col col-sm p-0">
+          <input type="text" class="form-control" id="citySearch" />
         </div>
-        <!-- Choose between C or F -->
-        <div class="col-12 col-sm-2 order-sm-first temp">
-          <span id="C">°C</span>
-          <span> |</span>
-          <span id="F"><a href="#" class="link">°F</a></span>
-        </div>
+        <div class="col-auto col-sm-auto px-1 col-auto">
+          <button type="submit" class="btn btn-primary search">
+          SEARCH
+        </button> <button class="btn btn-primary search" id="currentCityBtn">
+        C
+      </button>
+    </div>
+      </form>
+        <div class="col-12 col-sm-2 order-sm-first"><span id="C">°C</span>
+        <span> |</span>
+        <span id="F"><a href="#" class="link">°F</a></span></div>
       </div>
       <div class="row">
         <!-- Current weather icon -->
@@ -184,6 +174,13 @@
           </div>
         </div>
       </div>
+    </div>
+    <div class="container sign">
+      <span class="signtext">
+        <a href="https://github.com/dperezca/SheCodes-Weather" class="signtext"
+          >Open-source code</a
+        >, by Daniela Pérez
+      </span>
     </div>
     <script src="src/index.js"></script>
   </body>
