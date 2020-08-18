@@ -37,7 +37,7 @@
             </button>
           </div>
         </form>
-        <div class="col-12 col-sm-2 order-sm-first">
+        <div class="col-12 col-sm-2 order-sm-first align-self-center unit">
           <span id="C">°C</span>
           <span> |</span>
           <span id="F"><a href="#" class="link">°F</a></span>
@@ -45,23 +45,23 @@
       </div>
       <div class="row">
         <!-- Current weather icon -->
-        <div class="col-12 col-sm-4">
+        <div class="col-4 col-sm-auto align-self-center">
           <span class="iconoBig">
             <i class="fas fa-sun fa-7x" id="bigIcon"></i
           ></span>
         </div>
         <!-- City and day information -->
-        <div class="col-12 col-sm-4" id="activeCity">
-          <h1>
+        <div class="col-8 col-sm align-self-center" id="activeCity">
+          <h5>
             <span id="currentTemp">{{TP}}</span>°<span id="currentUnit"
               >{{U}}</span
             ><br /><span id="currentCity">
               {{CITY}}
             </span>
-          </h1>
+          </h5>
           <h2 id="date"></h2>
         </div>
-        <div class="col-12 col-sm-4">
+        <div class="col-12 col-sm">
           <!-- More weather information -->
           More weather info here
         </div>
@@ -180,9 +180,7 @@
     </div>
     <div class="container sign">
       <span class="signtext">
-        <a href="https://github.com/dperezca/SheCodes-Weather" class="signtext"
-          >Open-source code</a
-        >, by Daniela Pérez
+        Open-source code, by Daniela Pérez Casas
       </span>
     </div>
     <script src="src/index.js"></script>
