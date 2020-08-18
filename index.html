@@ -24,21 +24,24 @@
   <body>
     <div class="container">
       <div class="row searchBar">
-        <form id="searchForm"></form>
-        <div class="col col-sm p-0">
-          <input type="text" class="form-control" id="citySearch" />
+           <div class="col col-sm p-0">
+            <form class="form red" id="searchForm">
+            <input type="text" class="form-control" id="citySearch" />
+          </div>
+          <div class="col-auto col-sm-auto px-1 col-auto">
+            <button type="submit" class="btn btn-primary search">
+              SEARCH
+            </button>
+            <button class="btn btn-primary search" id="currentCityBtn">
+              C
+            </button>
+          </div>
+        </form>
+        <div class="col-12 col-sm-2 order-sm-first">
+          <span id="C">°C</span>
+          <span> |</span>
+          <span id="F"><a href="#" class="link">°F</a></span>
         </div>
-        <div class="col-auto col-sm-auto px-1 col-auto">
-          <button type="submit" class="btn btn-primary search">
-          SEARCH
-        </button> <button class="btn btn-primary search" id="currentCityBtn">
-        C
-      </button>
-    </div>
-      </form>
-        <div class="col-12 col-sm-2 order-sm-first"><span id="C">°C</span>
-        <span> |</span>
-        <span id="F"><a href="#" class="link">°F</a></span></div>
       </div>
       <div class="row">
         <!-- Current weather icon -->

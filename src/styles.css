@@ -138,6 +138,10 @@ h3 {
   box-shadow: 2px 2px 4px rgba(136, 136, 136, 0.4);
 }
 
+.form {
+  display: inline;
+  width: auto;
+}
 /* Other cities */
 
 /* ul {
