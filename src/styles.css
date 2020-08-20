@@ -1,5 +1,5 @@
 body {
-  background-color: #f5f5f5;
+  background-color: #b2dfdb;
   font-family: "Open Sans Condensed", sans-serif;
 }
 
@@ -10,7 +10,7 @@ body {
   border-style: dashed;
   border-color: #00695c;
   border-width: medium;
-  background-color: #4db6ac;
+  background-color: #80cbc4;
   box-shadow: 4px 4px 5px rgba(221, 216, 216, 0.6);
 }
 
@@ -90,6 +90,7 @@ h3 {
   font-size: 24px;
 }
 
+*/
 .temp,
 .temps {
   font-family: "Open Sans Condensed", sans-serif;
@@ -112,7 +113,7 @@ h3 {
 
 .days {
   text-align: center;
-} */
+}
 
 /* Weather icons */
 /* .fa-cloud-sun {
