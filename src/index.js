@@ -90,6 +90,7 @@ function searchByLocation(position) {
 
 // Update weather
 function updateWeather(response) {
+  console.log(response);
   latitude = response.data.coord.lat;
   longitude = response.data.coord.lon;
   city = response.data.name;
@@ -106,6 +107,9 @@ function updateWeather(response) {
   } else {
     actualUnit.innerHTML = "F";
   }
+  // Icon
+  let icon1 = document.querySelector("#icon0");
+  icon1.innerHTML = `<span class="iconoBig" id="icon0"><img src="http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png"></span>`;
   searchForecast();
 }
 
@@ -186,6 +190,7 @@ function searchForecast() {
 }
 
 function showForecast(response) {
+  console.log(response);
   for (var i = 1; i < 7; i++) {
     document.querySelector(`#day${i}-min`).innerHTML = `${Math.round(
       response.data.daily[getNextDays(i)].temp.min
@@ -193,5 +198,9 @@ function showForecast(response) {
     document.querySelector(`#day${i}-max`).innerHTML = `${Math.round(
       response.data.daily[getNextDays(i)].temp.max
     )}`;
+    console.log(response.data.daily[i].weather[0].icon);
+    document.querySelector(
+      `#icon${i}`
+    ).innerHTML = `<span class="iconoBig" id="icon${i}"><img src="http://openweathermap.org/img/wn/${response.data.daily[i].weather[0].icon}@2x.png"></span>`;
   }
 }

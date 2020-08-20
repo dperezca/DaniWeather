@@ -1,5 +1,5 @@
 body {
-  background-color: #4db6ac;
+  background-color: #f5f5f5;
 }
 
 .container {
@@ -8,7 +8,7 @@ body {
   border-style: dashed;
   border-color: #00695c;
   border-width: medium;
-  background-color: #ffffff;
+  background-color: #4db6ac;
   box-shadow: 4px 4px 5px rgba(221, 216, 216, 0.6);
 }
 
