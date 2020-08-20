@@ -109,7 +109,7 @@ function updateWeather(response) {
   }
   // Icon
   let icon1 = document.querySelector("#icon0");
-  icon1.innerHTML = `<span class="iconoBig" id="icon0"><img src="http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png"></span>`;
+  icon1.innerHTML = `<img src="http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png">`;
   searchForecast();
 }
 
@@ -201,6 +201,6 @@ function showForecast(response) {
     console.log(response.data.daily[i].weather[0].icon);
     document.querySelector(
       `#icon${i}`
-    ).innerHTML = `<span class="iconoBig" id="icon${i}"><img src="http://openweathermap.org/img/wn/${response.data.daily[i].weather[0].icon}@2x.png"></span>`;
+    ).innerHTML = `<img src="http://openweathermap.org/img/wn/${response.data.daily[i].weather[0].icon}@2x.png">`;
   }
 }

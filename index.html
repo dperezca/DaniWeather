@@ -43,23 +43,30 @@
           <span id="F"><a href="#" class="link">°F</a></span>
         </div>
       </div>
-      <div class="row">
+      <div class="row mt-2">
+
         <!-- Current weather icon -->
-        <div class="col-4 col-sm-auto align-self-center">
-          <span class="iconoBig" id="icon0">
-            <img src=""></span>
+        <div class="col-4 col-sm-auto align-self-center p-0">
+          <div><span id="icon0">
+            <img src=""></span></div>
+         
         </div>
+
         <!-- City and day information -->
-        <div class="col-8 col-sm align-self-center" id="activeCity">
-          <h5>
+        <div class="col-8 col-sm align-self-left p-0" id="activeCity">
+          <h1>
             <span id="currentTemp">{{TP}}</span>°<span id="currentUnit"
-              >{{U}}</span
-            ><br /><span id="currentCity">
+              >{{U}}</span>
+              </h1>
+              <h2>
+              <span id="currentCity">
               {{CITY}}
             </span>
-          </h5>
-          <h2 id="date"></h2>
+            </h2>
+          
+          <h3 id="date"></h3>
         </div>
+
         <div class="col-12 col-sm">
           <!-- More weather information -->
           More weather info here
@@ -70,19 +77,19 @@
           <!-- Forecast info -->
           <div class="row">
             <div class="col-6 col-sm-12">
+              <div class="red">
               <span class="iconoSm" id="icon1">
-                <img src=""></span>
+                <img src=""></span></div>
             </div>
             <div class="col-6 col-sm-12">
-              <span class="days">
+              <div class="blue"><span class="days">
                 <h3>
                   <span id="day1"> {{DAY}} </span><br />
-                  <span class="temp" id="day1-min">1</span
-                  ><span class="temp">° |</span>
-                  <span class="temps" id="day1-max">1</span
-                  ><span class="temps">°</span>
+                  <span class="temp" id="day1-min">1</span><span class="temp">° |</span>
+                  <span class="temps" id="day1-max">1</span><span class="temps">°</span>
                 </h3>
-              </span>
+              </span></div>
+            
             </div>
           </div>
         </div>
