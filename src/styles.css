@@ -141,7 +141,6 @@ h3 {
 }
 
 .form {
-  display: inline;
   width: auto;
 }
 /* Other cities */
@@ -218,7 +217,6 @@ p {
 
 @media screen and (min-width: 601px) {
   h5 {
-    display: inline;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 40px;
     line-height: 40px;
@@ -228,7 +226,6 @@ p {
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
 @media screen and (max-width: 600px) {
   h5 {
-    display: inline;
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 26px;
     line-height: 26px;

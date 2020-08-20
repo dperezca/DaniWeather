@@ -90,7 +90,8 @@ function searchByLocation(position) {
 
 // Update weather
 function updateWeather(response) {
-  console.log(response);
+  latitude = response.data.coord.lat;
+  longitude = response.data.coord.lon;
   city = response.data.name;
   let currentCity = document.querySelector("#currentCity");
   currentCity.innerHTML = `${city}`;
@@ -105,6 +106,7 @@ function updateWeather(response) {
   } else {
     actualUnit.innerHTML = "F";
   }
+  searchForecast();
 }
 
 // "CURRENT BUTTON"
