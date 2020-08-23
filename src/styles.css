@@ -78,26 +78,6 @@ h3 {
   font-size: 20px;
   line-height: 18px;
 }
-/*
-
-
-.abajo {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
-.span {
-  display: block;
-  margin: o auto;
-  text-align: center;
-}
-
-h3 {
-  font-family: "Open Sans Condensed", sans-serif;
-  font-size: 24px;
-}
-
-*/
 .temp,
 .temps {
   font-family: "Open Sans Condensed", sans-serif;
@@ -159,7 +139,7 @@ h3 {
   box-shadow: 2px 2px 4px rgba(136, 136, 136, 0.4);
 }
 
-.act {
+.unitbtn:disabled {
   background-color: grey;
   border-color: grey;
   color: #ffffff;
@@ -188,6 +168,16 @@ h3 {
   border-color: rgba(0, 105, 92, 1);
   color: #ffffff;
   box-shadow: 2px 2px 4px rgba(136, 136, 136, 0.4);
+}
+
+.search:focus {
+  background-color: rgba(0, 105, 92, 1);
+  border-right: 0px;
+  border-color: rgba(0, 105, 92, 1);
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 2px 2px 4px rgba(136, 136, 136, 0.4);
+  width: auto;
 }
 
 .form {

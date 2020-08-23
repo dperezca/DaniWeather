@@ -11,8 +11,8 @@ let weekdays = [
 ];
 let now = new Date();
 
-function showTime() {
-  let now = new Date();
+function showTime(dateInfo) {
+  let now = new Date(dateInfo * 1000);
   let weekday = weekdays[now.getDay()];
   let day = now.getDate();
   let months = [
@@ -42,8 +42,18 @@ function showTime() {
   return `${weekday}, ${month} ${day}<sup>th</sup>  ${hour}:${minute}`;
 }
 
-let time = document.querySelector("#date");
-time.innerHTML = showTime();
+function getTime(time) {
+  time = new Date(time * 1000);
+  let hour = time.getHours();
+  if (time.getHours() < 10) {
+    hour = `0${hour}`;
+  }
+  let minute = time.getMinutes();
+  if (time.getMinutes() < 10) {
+    minute = `0${minute}`;
+  }
+  return `${hour}:${minute}`;
+}
 
 // Declare variables
 let city = "Barcelona";
@@ -54,6 +64,7 @@ let longitude = 2.16;
 
 searchByName();
 searchForecast();
+showTime();
 
 // Search by name
 
@@ -117,6 +128,22 @@ function updateWeather(response) {
   let icon1 = document.querySelector("#icon0");
   icon1.innerHTML = `<img src="http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png">`;
   searchForecast();
+  //Time
+  let time = document.querySelector("#date");
+  time.innerHTML = showTime(response.data.dt);
+  //Humidity
+  document.querySelector(
+    "#humidity"
+  ).innerHTML = `${response.data.main.humidity}%`;
+  document.querySelector(
+    "#wind"
+  ).innerHTML = `${response.data.wind.speed} km/hr`;
+  document.querySelector("#sunrise").innerHTML = getTime(
+    response.data.sys.sunrise
+  );
+  document.querySelector("#sunset").innerHTML = getTime(
+    response.data.sys.sunset
+  );
 }
 
 // "CURRENT BUTTON"
@@ -130,34 +157,26 @@ searchBtn.addEventListener("submit", searchCity);
 
 function searchCity(event) {
   event.preventDefault();
+
   let newCity = document.querySelector("#citySearch");
   city = newCity.value;
   searchByName();
+  newCity.value = "";
 }
 
 //Change C/F
-
-function showCF() {
-  let F = document.querySelector("#F");
-  console.log(F);
-  let C = document.querySelector("#C");
-  if (unit === "metric") {
-    F.innerHTML = `<a href="#" class="link" >°F </a>`;
-    C.innerHTML = `°C `;
-  } else {
-    C.innerHTML = `<a href="#" class="link" >°C </a>`;
-    F.innerHTML = `°F `;
-  }
-}
 
 function changeUnit(event) {
   event.preventDefault();
   if (unit === "metric") {
     unit = "imperial";
+    F.disabled = true;
+    C.disabled = false;
   } else {
     unit = "metric";
+    C.disabled = true;
+    F.disabled = false;
   }
-  showCF();
   searchByName();
 }
 
@@ -182,8 +201,6 @@ document.querySelector("#day4").innerHTML = `${weekdays[getNextDays(4)]}`;
 document.querySelector("#day5").innerHTML = `${weekdays[getNextDays(5)]}`;
 document.querySelector("#day6").innerHTML = `${weekdays[getNextDays(6)]}`;
 
-console.log(getNextDays(2));
-
 // Get forecast
 
 function searchForecast() {
@@ -197,7 +214,6 @@ function searchForecast() {
 }
 
 function showForecast(response) {
-  console.log(response);
   for (var i = 1; i < 7; i++) {
     document.querySelector(`#day${i}-min`).innerHTML = `${Math.round(
       response.data.daily[getNextDays(i)].temp.min
@@ -205,7 +221,6 @@ function showForecast(response) {
     document.querySelector(`#day${i}-max`).innerHTML = `${Math.round(
       response.data.daily[getNextDays(i)].temp.max
     )}`;
-    console.log(response.data.daily[i].weather[0].icon);
     document.querySelector(
       `#icon${i}`
     ).innerHTML = `<img src="http://openweathermap.org/img/wn/${response.data.daily[i].weather[0].icon}@2x.png">`;
