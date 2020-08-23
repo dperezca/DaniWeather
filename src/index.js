@@ -135,9 +135,17 @@ function updateWeather(response) {
   document.querySelector(
     "#humidity"
   ).innerHTML = `${response.data.main.humidity}%`;
-  document.querySelector(
-    "#wind"
-  ).innerHTML = `${response.data.wind.speed} km/hr`;
+  // Wind
+  let wind;
+  let windUnit;
+  if (unit === "metric") {
+    wind = response.data.wind.speed * 3.6;
+    windUnit = "km/hr";
+  } else {
+    wind = response.data.wind.speed;
+    windUnit = "miles/hr";
+  }
+  document.querySelector("#wind").innerHTML = `${wind} ${windUnit}`;
   document.querySelector("#sunrise").innerHTML = getTime(
     response.data.sys.sunrise
   );
