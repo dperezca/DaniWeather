@@ -31,7 +31,13 @@ function showTime() {
   ];
   let month = months[now.getMonth()];
   let hour = now.getHours();
+  if (now.getHours() < 10) {
+    hour = `0${hour}`;
+  }
   let minute = now.getMinutes();
+  if (now.getMinutes() < 10) {
+    minute = `0${minute}`;
+  }
 
   return `${weekday}, ${month} ${day}<sup>th</sup>  ${hour}:${minute}`;
 }
@@ -133,6 +139,7 @@ function searchCity(event) {
 
 function showCF() {
   let F = document.querySelector("#F");
+  console.log(F);
   let C = document.querySelector("#C");
   if (unit === "metric") {
     F.innerHTML = `<a href="#" class="link" >°F </a>`;

@@ -3,6 +3,12 @@ body {
   font-family: "Open Sans Condensed", sans-serif;
 }
 
+.iconBack {
+  background: #e7dfd5;
+  border-radius: 50px;
+  box-shadow: 4px 4px 5px rgba(221, 216, 216, 0.6);
+  width: 100px;
+}
 .container {
   margin-top: 3%;
   width: 95%;
@@ -10,7 +16,8 @@ body {
   border-style: dashed;
   border-color: #00695c;
   border-width: medium;
-  background-color: #80cbc4;
+  background-color: #ffffff;
+  /* background-color: #80cbc4; */
   box-shadow: 4px 4px 5px rgba(221, 216, 216, 0.6);
 }
 
@@ -138,8 +145,17 @@ h3 {
   border-right: 0px;
   border-color: rgba(0, 105, 92, 1);
   color: #ffffff;
-  font-family: "Open Sans Condensed", sans-serif;
   font-weight: bold;
+  box-shadow: 2px 2px 4px rgba(136, 136, 136, 0.4);
+  width: auto;
+}
+
+.unitbtn {
+  background-color: rgba(0, 105, 92, 1);
+  border-width: 1;
+  border-right: 0px;
+  border-color: rgba(0, 105, 92, 1);
+  color: #ffffff;
   box-shadow: 2px 2px 4px rgba(136, 136, 136, 0.4);
   width: auto;
 }

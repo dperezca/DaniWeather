@@ -38,23 +38,25 @@
             </button>
           </div>
         </form>
-        <div class="col-12 col-sm-2 order-sm-first align-self-center unit">
-          <span id="C">°C</span>
-          <span> |</span>
-          <span id="F"><a href="#" class="link">°F</a></span>
-        </div>
+        <div class="col-12 col-sm-2 order-sm-first align-self-center unit m-sm-0 mt-4">
+          <button class="btn btn-primary unitbtn" id="F">
+            °F
+          </button> <button class="btn btn-primary unitbtn" id="C">
+            °C
+          </button> 
+           </div>
       </div>
-      <div class="row mt-2">
+      <div class="row mt-2 mb-4 mt-2 my-sm-3">
 
         <!-- Current weather icon -->
-        <div class="col-4 col-sm-auto align-self-center p-0">
-          <div><span id="icon0">
-            <img src=""></span></div>
+        <div class="col-auto col-sm-auto align-self-center p-0 mx-3 iconBack">
+          <span id="icon0">
+            <img src=""></span>
          
         </div>
 
         <!-- City and day information -->
-        <div class="col-8 col-sm align-self-left p-0" id="activeCity">
+        <div class="col col-sm align-self-left p-0" id="activeCity">
           <h1>
             <span id="currentTemp">{{TP}}</span>°<span id="currentUnit"
               >{{U}}</span>
@@ -73,16 +75,16 @@
           More weather info here
         </div>
       </div>
-      <div class="row">
+      <div class="row mt-2 my-4">
         <div class="col-12 col-sm-2">
           <!-- Forecast info -->
-          <div class="row">
-            <div class="col-6 col-sm-12">
-              <div>
-              <span class="iconoSm" id="icon1">
+          <div class="row my-sm-0 my-1">
+            <div class="col-auto col-sm-12 p-0 mx-3">
+              <div class="iconBack">
+                <span class="iconoSm" id="icon1">
                 <img src=""></span></div>
             </div>
-            <div class="col-6 col-sm-12">
+            <div class="col col-sm-12">
               <div><span class="days">
                 <h3>
                   <span id="day1"> {{DAY}} </span><br />
@@ -95,11 +97,12 @@
           </div>
         </div>
         <div class="col-12 col-sm-2">
-          <div class="row">
-            <div class="col-6 col-sm-12">
+          <div class="row my-sm-0 my-1">
+            <div class="col-auto col-sm-12 p-0 mx-3">
+              <div class="iconBack">
               <span class="iconoSm" id="icon2">
                 <img src=""></span>
-            </div>
+            </div> </div>
             <div class="col-6 col-sm-12">
               <span class="days">
                 <h3>
@@ -114,11 +117,14 @@
           </div>
         </div>
         <div class="col-12 col-sm-2">
-          <div class="row">
-            <div class="col-6 col-sm-12">
-              <span class="iconoSm" id="icon3">
-                <img src=""></span>
+          <div class="row my-sm-0 my-1">
+            <div class="col-auto col-sm-12 p-0 mx-3">
+              <div class="iconBack">
+                <span class="iconoSm" id="icon3">
+                  <img src=""></span>
+              </div>
             </div>
+            
             <div class="col-6 col-sm-12">
               <span class="days">
                 <h3>
@@ -133,11 +139,13 @@
           </div>
         </div>
         <div class="col-12 col-sm-2">
-          <div class="row">
-            <div class="col-6 col-sm-12">
-              <span class="iconoSm" id="icon4">
-                <img src=""></span>
-            </div>
+          <div class="row my-sm-0 my-1">
+        <div class="col-auto col-sm-12 p-0 mx-3">
+          <div class="iconBack">
+            <span class="iconoSm" id="icon4">
+              <img src=""></span>
+          </div>
+        </div>
             <div class="col-6 col-sm-12">
               <span class="days">
                 <h3>
@@ -152,11 +160,13 @@
           </div>
         </div>
         <div class="col-12 col-sm-2">
-          <div class="row">
-            <div class="col-6 col-sm-12">
-              <span class="iconoSm" id="icon5">
-                <img src=""></span>
-            </div>
+          <div class="row my-sm-0 my-1">
+        <div class="col-auto col-sm-12 p-0 mx-3">
+          <div class="iconBack">
+            <span class="iconoSm" id="icon5">
+              <img src=""></span>
+          </div>
+        </div>
             <div class="col-6 col-sm-12">
               <span class="days">
                 <h3>
@@ -171,11 +181,13 @@
           </div>
         </div>
         <div class="col-12 col-sm-2">
-          <div class="row">
-            <div class="col-6 col-sm-12">
-              <span class="iconoSm" id="icon6">
-                <img src=""></span>
-            </div>
+          <div class="row my-sm-0 my-1">
+      <div class="col-auto col-sm-12 p-0 mx-3">
+        <div class="iconBack">
+          <span class="iconoSm" id="icon6">
+            <img src=""></span>
+        </div>
+      </div>
             <div class="col-6 col-sm-12">
               <span class="days">
                 <h3>
