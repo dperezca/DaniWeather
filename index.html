@@ -24,7 +24,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="row searchBar">
+      <div class="row searchBar justify-content-center ">
            <div class="col col-sm p-0">
             <form class="form" id="searchForm">
             <input type="text" class="form-control" id="citySearch" />
@@ -38,15 +38,15 @@
             </button>
           </div>
         </form>
-        <div class="col-12 col-sm-2 order-sm-first align-self-center unit m-sm-0 mt-4">
-          <button class="btn btn-primary unitbtn" id="F">
-            °F
-          </button> <button class="btn btn-primary unitbtn" id="C">
+         <div class="col-12 col-sm-2 order-sm-first align-self-center unit m-sm-0 mt-4 px-1">
+          <button class="btn btn-primary unitbtn Fbtn" id="F">    °F
+          </button><button class="btn btn-primary unitbtn act Cbtn" id="C">
             °C
           </button> 
            </div>
+        
       </div>
-      <div class="row mt-2 mb-4 mt-2 my-sm-3">
+      <div class="row mt-2 mb-4 mt-2 my-sm-3 mr-1">
 
         <!-- Current weather icon -->
         <div class="col-auto col-sm-auto align-self-center p-0 mx-3 iconBack">
@@ -56,7 +56,7 @@
         </div>
 
         <!-- City and day information -->
-        <div class="col col-sm align-self-left p-0" id="activeCity">
+        <div class="col col-sm align-self-left p-0 pl-3 border-left" id="activeCity">
           <h1>
             <span id="currentTemp">{{TP}}</span>°<span id="currentUnit"
               >{{U}}</span>
@@ -66,11 +66,10 @@
               {{CITY}}
             </span>
             </h2>
-          
           <h3 id="date"></h3>
         </div>
 
-        <div class="col-12 col-sm">
+        <div class="col-12 col-sm border rounded">
           <!-- More weather information -->
           More weather info here
         </div>

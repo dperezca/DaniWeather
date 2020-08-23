@@ -1,5 +1,5 @@
 body {
-  background-color: #b2dfdb;
+  background-color: #4db6ac;
   font-family: "Open Sans Condensed", sans-serif;
 }
 
@@ -63,8 +63,8 @@ img {
 }
 
 h1 {
-  font-size: 36px;
-  line-height: 28px;
+  font-size: 48px;
+  line-height: 48px;
   font-weight: 500;
   margin-bottom: 0;
 }
@@ -151,13 +151,32 @@ h3 {
 }
 
 .unitbtn {
-  background-color: rgba(0, 105, 92, 1);
-  border-width: 1;
-  border-right: 0px;
-  border-color: rgba(0, 105, 92, 1);
-  color: #ffffff;
+  width: 50%;
+  background-color: #ffffff;
+  border-width: thin;
+  border-color: grey;
+  color: #000000;
   box-shadow: 2px 2px 4px rgba(136, 136, 136, 0.4);
-  width: auto;
+}
+
+.act {
+  background-color: grey;
+  border-color: grey;
+  color: #ffffff;
+}
+
+.Fbtn {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.Cbtn {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .fa-map-marker-alt {
