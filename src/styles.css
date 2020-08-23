@@ -9,6 +9,11 @@ body {
   box-shadow: 4px 4px 5px rgba(221, 216, 216, 0.6);
   width: 100px;
 }
+
+.FC {
+  width: 75px;
+}
+
 .container {
   margin-top: 3%;
   width: 95%;
@@ -52,10 +57,6 @@ body {
   position: relative;
   box-sizing: border-box;
   display: block;
-}
-
-img {
-  width: auto;
 }
 
 h1 {
@@ -270,7 +271,15 @@ p {
   padding: 10px;
 }
 
-@media screen and (min-width: 601px) {
+img {
+  width: auto;
+}
+
+.imgforecast {
+  width: 75px;
+}
+
+@media screen and (min-width: 401px) {
   h5 {
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 40px;
@@ -279,7 +288,7 @@ p {
 }
 
 /* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   h5 {
     font-family: "Open Sans Condensed", sans-serif;
     font-size: 26px;

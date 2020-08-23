@@ -231,6 +231,6 @@ function showForecast(response) {
     )}`;
     document.querySelector(
       `#icon${i}`
-    ).innerHTML = `<img src="http://openweathermap.org/img/wn/${response.data.daily[i].weather[0].icon}@2x.png">`;
+    ).innerHTML = `<img class="imgforecast" src="http://openweathermap.org/img/wn/${response.data.daily[i].weather[0].icon}@2x.png">`;
   }
 }
