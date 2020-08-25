@@ -85,11 +85,11 @@ function getLocation(event) {
 }
 
 function locationError() {
-  alert("No hay location");
+  $(`#basicExampleModal`).modal("show");
 }
 
 function searchError() {
-  alert("There is no city with that name, please try again");
+  $(`#basicExampleModal`).modal("show");
 }
 
 // Search for the weather
@@ -139,10 +139,10 @@ function updateWeather(response) {
   let wind;
   let windUnit;
   if (unit === "metric") {
-    wind = response.data.wind.speed * 3.6;
+    wind = Math.round(response.data.wind.speed * 3.6 * 100) / 100;
     windUnit = "km/hr";
   } else {
-    wind = response.data.wind.speed;
+    wind = Math.round(response.data.wind.speed * 100) / 100;
     windUnit = "miles/hr";
   }
   document.querySelector("#wind").innerHTML = `${wind} ${windUnit}`;
