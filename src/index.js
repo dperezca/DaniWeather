@@ -85,11 +85,11 @@ function getLocation(event) {
 }
 
 function locationError() {
-  $(`#basicExampleModal`).modal("show");
+  $("#modalLocation").modal("show");
 }
 
 function searchError() {
-  $(`#basicExampleModal`).modal("show");
+  $(`#modalSearch`).modal("show");
 }
 
 // Search for the weather
@@ -233,4 +233,37 @@ function showForecast(response) {
       `#icon${i}`
     ).innerHTML = `<img class="imgforecast" src="http://openweathermap.org/img/wn/${response.data.daily[i].weather[0].icon}@2x.png">`;
   }
+}
+
+if (document.getElementById("btnModal")) {
+  var modal = document.getElementById("tvesModal");
+  var btn = document.getElementById("btnModal");
+  var span = document.getElementsByClassName("close")[0];
+  var body = document.getElementsByTagName("body")[0];
+
+  btn.onclick = function () {
+    modal.style.display = "block";
+
+    body.style.position = "static";
+    body.style.height = "100%";
+    body.style.overflow = "hidden";
+  };
+
+  span.onclick = function () {
+    modal.style.display = "none";
+
+    body.style.position = "inherit";
+    body.style.height = "auto";
+    body.style.overflow = "visible";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+
+      body.style.position = "inherit";
+      body.style.height = "auto";
+      body.style.overflow = "visible";
+    }
+  };
 }
