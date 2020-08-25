@@ -47,7 +47,7 @@
            </div>
         
       </div>
-      <div class="row mt-2 mb-2 mt-2 my-sm-3 mr-1">
+      <div class="row mt-3 mb-2 mt-sm-2 my-sm-3 mr-1">
 
         <!-- Current weather icon -->
         <div class="col-auto col-sm-auto align-self-center p-0 mx-3 iconBack">
@@ -57,7 +57,8 @@
         </div>
 
         <!-- City and day information -->
-        <div class="col col-sm-4 align-self-left pt-sm-10 pl-3" id="activeCity">
+        <div class="col col-sm-4 align-self-left pt-sm-10 pl-3 pr-0" id="activeCity">
+          <div class="py-sm-4">
           <h1>
             <span id="currentTemp">{{TP}}</span>°<span id="currentUnit"
               >{{U}}</span>
@@ -69,8 +70,9 @@
             </h2>
           <h3 id="date"></h3>
         </div>
+        </div>
     <!-- More weather information -->
-        <div class="col-12 col-sm border rounded p-2 align-self-center mx-2 mt-4 mt-sm-0 mb-2">
+            <div class="col-12 col-sm border rounded p-2 align-self-center mx-2 mt-4 mt-sm-0 mb-2 moreinfobox">
       <div class="row my-2">
         <div class="col-6"><h3> Humidity</h3></div>
         <div class="col-6 text-right"><i class="fas fa-tint"></i> <h3 id="humidity" class="moreinfo">{{humidity}}</h3></div>
@@ -88,7 +90,7 @@
         <div class="col-6 text-right"><i class="fas fa-chevron-down"></i> <h3 id="sunset" class="moreinfo">{{sunse}}</h3></div>
       </div>
       </div>
-    </div>
+       </div>
       <div class="row mt-1 mb-4">
         <div class="col-12 col-sm-2">
           <!-- Forecast info -->
@@ -98,10 +100,11 @@
               <span class="iconoSm" id="icon1">
                 <img src=""></span>
             </div> </div>
-            <div class="col-6 col-sm-12">
+            <div class="col-6 col-sm-12 mt-sm-4">
               <span class="days">
                 <h3>
-                  <span id="day1"> {{DAY}} </span><br />
+                  <span id="day1"> {{DAY}} </span></h3>
+                  <h3>
                   <span class="temp" id="day1-min">1</span
                   ><span class="temp">° |</span>
                   <span class="temps" id="day1-max">1</span
@@ -118,10 +121,11 @@
               <span class="iconoSm" id="icon2">
                 <img src=""></span>
             </div> </div>
-            <div class="col-6 col-sm-12">
+            <div class="col-6 col-sm-12 mt-sm-4">
               <span class="days">
-                <h3>
-                  <span id="day2"> {{DAY}} </span><br />
+          <h3>
+                  <span id="day2"> {{DAY}} </span></h3>
+                  <h3>
                   <span class="temp" id="day2-min">1</span
                   ><span class="temp">° |</span>
                   <span class="temps" id="day2-max">1</span
@@ -140,10 +144,10 @@
               </div>
             </div>
             
-            <div class="col-6 col-sm-12">
+            <div class="col-6 col-sm-12 mt-sm-4">
               <span class="days">
                 <h3>
-                  <span id="day3"> {{DAY}} </span><br />
+                  <span id="day3"> {{DAY}} </span></h3> <h3>
                   <span class="temp" id="day3-min">1</span
                   ><span class="temp">° |</span>
                   <span class="temps" id="day3-max">1</span
@@ -161,10 +165,10 @@
               <img src=""></span>
           </div>
         </div>
-            <div class="col-6 col-sm-12">
+            <div class="col-6 col-sm-12 mt-sm-4">
               <span class="days">
                 <h3>
-                  <span id="day4"> {{DAY}} </span><br />
+                  <span id="day4"> {{DAY}} </span></h3> <h3>
                   <span class="temp" id="day4-min">1</span
                   ><span class="temp">° |</span>
                   <span class="temps" id="day4-max">1</span
@@ -182,10 +186,10 @@
               <img src=""></span>
           </div>
         </div>
-            <div class="col-6 col-sm-12">
+            <div class="col-6 col-sm-12 mt-sm-4">
               <span class="days">
                 <h3>
-                  <span id="day5"> {{DAY}} </span><br />
+                  <span id="day5"> {{DAY}} </span></h3> <h3>
                   <span class="temp" id="day5-min">1</span
                   ><span class="temp">° |</span>
                   <span class="temps" id="day5-max">1</span
@@ -203,10 +207,10 @@
             <img src=""></span>
         </div>
       </div>
-            <div class="col-6 col-sm-12">
+            <div class="col-6 col-sm-12 mt-sm-4">
               <span class="days">
                 <h3>
-                  <span id="day6"> {{DAY}} </span><br />
+                  <span id="day6"> {{DAY}} </span></h3> <h3>
                   <span class="temp" id="day6-min">1</span
                   ><span class="temp">° |</span>
                   <span class="temps" id="day6-max">1</span
