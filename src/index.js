@@ -222,17 +222,17 @@ function searchForecast() {
 }
 
 function showForecast(response) {
-  for (var i = 1; i < 7; i++) {
-    document.querySelector(`#day${i}-min`).innerHTML = `${Math.round(
+  for (var i = 0; i < 7; i++) {
+    document.querySelector(`#day${i + 1}-min`).innerHTML = `${Math.round(
       response.data.daily[getNextDays(i)].temp.min
     )}`;
-    document.querySelector(`#day${i}-max`).innerHTML = `${Math.round(
+    document.querySelector(`#day${i + 1}-max`).innerHTML = `${Math.round(
       response.data.daily[getNextDays(i)].temp.max
     )}`;
-    document.querySelector(`#day${i}-desc`).innerHTML =
+    document.querySelector(`#day${i + 1}-desc`).innerHTML =
       response.data.daily[getNextDays(i)].weather[0].description;
     document.querySelector(
-      `#icon${i}`
+      `#icon${i + 1}`
     ).innerHTML = `<img class="imgforecast" src="http://openweathermap.org/img/wn/${response.data.daily[i].weather[0].icon}@2x.png">`;
   }
 }
