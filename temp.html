@@ -1,0 +1,30 @@
+<div class="row">
+    <!-- Search box -->
+    <div class="col-12 col-sm-10 order-sm-last searchBox">
+        <form id="searchForm">
+            <div class="form-group">
+                <div class="row justify-content-center searchBar">
+                    <div class="col-10 blue barra">
+                        <input type="text" class="form-control" id="citySearch" aria-describedby="emailHelp" />
+                    </div>
+                    <div class="col-1 col-auto" red barra">
+                        <button type="submit" class="btn btn-primary search">
+                            SEARCH
+                        </button>
+                    </div>
+                    <div class="col-1 col-auto red barra">
+                        <button class="btn btn-primary search" id="currentCityBtn">
+                            C
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!-- Choose between C or F -->
+    <div class="col-12 col-sm-2 order-sm-first temp">
+        <span id="C">°C</span>
+        <span> |</span>
+        <span id="F"><a href="#" class="link">°F</a></span>
+    </div>
+</div>

@@ -38,7 +38,11 @@ body {
   box-shadow: 4px 4px 5px rgba(221, 216, 216, 0.6);
 }
 
-/* .sign {
+.description {
+  text-transform: capitalize;
+}
+
+.sign {
   border-style: none;
   background-color: #4db6ac;
   border: 0px;
@@ -51,17 +55,11 @@ body {
   color: white;
 }
 
-.row {
-  border: 10px black;
-} */
-
-/* .form-group {
-  margin-bottom: 5px;
-} */
-
-/* #activeCity {
-  padding: 20px 10px 10px 5px;
-} */
+.signtext:hover {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 14px;
+  color: white;
+}
 
 .iconoBig {
   text-align: center;
@@ -111,12 +109,6 @@ h3 {
   text-align: center;
 }
 
-/* Weather icons */
-/* .fa-cloud-sun {
-  color: #bdbdbd;
-  display: block;
-}
-*/
 .fa-sun {
   color: #ffd571;
   display: block;
@@ -148,16 +140,6 @@ h3 {
   box-shadow: 2px 2px 4px rgba(136, 136, 136, 0.4);
   opacity: 0.64;
 }
-
-/* .unitbtn:hover,
-:focus {
-  background-color: #4db6ac;
-  border-width: thin;
-  border-color: #4db6ac;
-  color: #ffffff;
-  box-shadow: 2px 2px 4px rgba(136, 136, 136, 0.4);
-  opacity: 0.64;
-} */
 
 .unitbtn:disabled {
   background-color: #4db6ac;
@@ -212,26 +194,6 @@ h3 {
   width: auto;
 }
 /* Other cities */
-
-/* ul {
-  padding: 0px;
-  margin: 0;
-  text-align: center;
-}
-li {
-  display: inline;
-  list-style: normal;
-  font-family: "Open Sans Condensed", sans-serif;
-  font-size: 20px;
-  padding-right: 20px;
-  padding-left: 20px;
-}
-
-p {
-  margin: 15px 0px 0px 0px;
-  font-family: "Open Sans Condensed", sans-serif;
-  font-size: 20px;
-} */
 
 .searchBox {
   padding: 10px;

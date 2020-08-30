@@ -62,17 +62,17 @@ let latitude = 41.39;
 let longitude = 2.16;
 //
 
-searchByName();
+searchByName(city);
 searchForecast();
 showTime();
 
 // Search by name
 
-function searchByName() {
+function searchByName(citySearch) {
   let apiKey = "d3d18b4de61cbdf36ec875b64e7d8cae";
   let apiURL = "https://api.openweathermap.org/data/2.5/weather?q=";
   axios
-    .get(`${apiURL}${city}&appid=${apiKey}&units=${unit}`)
+    .get(`${apiURL}${citySearch}&appid=${apiKey}&units=${unit}`)
     .then(updateWeather, searchError);
 }
 
@@ -107,7 +107,6 @@ function searchByLocation(position) {
 
 // Update weather
 function updateWeather(response) {
-  console.log(response);
   latitude = response.data.coord.lat;
   longitude = response.data.coord.lon;
   city = response.data.name;
@@ -117,6 +116,9 @@ function updateWeather(response) {
   let currentTemp = document.querySelector("#currentTemp");
   let newTemp = Math.round(response.data.main.temp);
   currentTemp.innerHTML = `${newTemp}`;
+  // Description
+  let description = document.querySelector("#weatherDesc");
+  description.innerHTML = `${response.data.weather[0].description}`;
   // Units
   let actualUnit = document.querySelector("#currentUnit");
   if (unit === "metric") {
@@ -165,10 +167,8 @@ searchBtn.addEventListener("submit", searchCity);
 
 function searchCity(event) {
   event.preventDefault();
-
   let newCity = document.querySelector("#citySearch");
-  city = newCity.value;
-  searchByName();
+  searchByName(newCity.value);
   newCity.value = "";
 }
 
@@ -185,7 +185,7 @@ function changeUnit(event) {
     C.disabled = true;
     F.disabled = false;
   }
-  searchByName();
+  searchByName(city);
 }
 
 F.addEventListener("click", changeUnit);
@@ -229,6 +229,8 @@ function showForecast(response) {
     document.querySelector(`#day${i}-max`).innerHTML = `${Math.round(
       response.data.daily[getNextDays(i)].temp.max
     )}`;
+    document.querySelector(`#day${i}-desc`).innerHTML =
+      response.data.daily[getNextDays(i)].weather[0].description;
     document.querySelector(
       `#icon${i}`
     ).innerHTML = `<img class="imgforecast" src="http://openweathermap.org/img/wn/${response.data.daily[i].weather[0].icon}@2x.png">`;
